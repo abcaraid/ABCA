@@ -43,6 +43,7 @@
 			
   			<p>Current price in USD: $<span id="USD">Loading...</span></p>
 			<p>Circulating supply: $<span id="circulating_supply">Loading...</span></p>
+			<p>Market cap: $<span id="market_cap">Loading...</span></p>
 
 			<h2>Features</h2>
 			<ul>
@@ -69,29 +70,34 @@
 	<footer>
 		<p>&copy; 2023 ABCA community. All rights reserved.</p>
 	</footer>
-	<script>
-  		// Make a USD price request to the API endpoint
-  		fetch('https://free-api.vestige.fi/asset/1037125809/price')
-   	 	.then(response => response.json())
-   	 	.then(data => {
-     	 		// Update the HTML element with the price information
-     			const priceElement = document.getElementById('USD');
-     	 		priceElement.textContent = data.USD.toFixed(5);
-   	 		})
-		.catch(error => {
-     	 		console.error('Error fetching price:', error);
-    		});
-		// Make a circulating request to the API endpoint
-  		fetch('https://free-api.vestige.fi/asset/1037125809')
-   	 	.then(response => response.json())
-   	 	.then(data => {
-     	 		// Update the HTML element with the circulating supply information
-     			const assetElement = document.getElementById('circulating_supply');
-     	 		assetElement.textContent = data.circulating_supply.toFixed(14);
-   	 		})
-		.catch(error => {
-     	 		console.error('Error fetching asset:', error);
-    		});
-	</script>
+<script>
+  // Make a USD price request to the API endpoint
+  fetch('https://free-api.vestige.fi/asset/1037125809/price')
+    .then(response => response.json())
+    .then(data => {
+      // Update the HTML element with the price information
+      const priceElement = document.getElementById('USD');
+      priceElement.textContent = data.USD.toFixed(5);
+      // Make a circulating request to the API endpoint
+      fetch('https://free-api.vestige.fi/asset/1037125809')
+        .then(response => response.json())
+        .then(data => {
+          // Update the HTML element with the circulating supply information
+          const assetElement = document.getElementById('circulating_supply');
+          assetElement.textContent = data.circulating_supply.toFixed(8);
+	      
+	  // Calculate and update the market cap element
+          const marketCapElement = document.getElementById('market_cap');
+          const marketCap = priceData.USD * assetData.circulating_supply;
+          marketCapElement.textContent = marketCap.toFixed(2);
+        })
+        .catch(error => {
+          console.error('Error fetching asset:', error);
+        });
+    })
+    .catch(error => {
+      console.error('Error fetching price:', error);
+    });
+</script>
   </body>
 </html>

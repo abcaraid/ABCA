@@ -78,7 +78,7 @@ li {
     color: #ffd700;
     padding: 60px;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     animation-name: breathe;
     animation-duration: 2s;
     animation-iteration-count: infinite;

@@ -1,7 +1,7 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #1a1a1a;
-    color: #fff;
+    color: #ccc;
     font-size: 18px;
     line-height: 1.5;
     margin: 0;
@@ -9,15 +9,15 @@ body {
 }
 
 header {
-    background-color: #ffd700;
-    color: #000;
+    background-color: #4b0082;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 footer {
-    background-color: #ffd700;
-    color: #000;
+    background-color: #4b0082;
+    color: #fff;
     padding: 10px;
     text-align: center;
 }
@@ -25,13 +25,18 @@ footer {
 h1 {
     font-size: 4rem;
     margin: 0;
-    text-shadow: 0 0 10px #0066cc;
+    text-shadow: 0 0 10px #ccc;
     animation: glow 1s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  0% { text-shadow: 0 0 10px #0066cc; }
-  100% { text-shadow: 0 0 20px #ff6600; }
+    0% {
+        text-shadow: 0 0 10px #ccc;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #4b0082;
+    }
 }
 
 .container {
@@ -51,22 +56,22 @@ li {
 
 .btn {
     display: inline-block;
-    background-color: #ffd700;
-    color: #000;
+    background-color: #4b0082;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     margin-top: 20px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 10px rgba(75, 0, 130, 0.5);
 }
 
 .btn:hover {
-    background-color: #000;
-    color: #ffd700;
+    background-color: #663399;
+    color: #fff;
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 15px rgba(75, 0, 130, 0.8);
 }
 
 .btn-group {
@@ -82,7 +87,7 @@ li {
 
 #call-to-action {
     background-color: #000;
-    color: #ffd700;
+    color: #fff;
     padding: 60px;
     text-align: center;
 }
@@ -92,7 +97,7 @@ li {
     margin: 0;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #ffd700;
+    color: #4b0082;
 }
 
 #call-to-action p {
@@ -100,7 +105,7 @@ li {
     margin: 0;
     margin-bottom: 40px;
     font-weight: 400;
-    color: #fff;
+    color: #ccc;
 }
 
 #call-to-action a {

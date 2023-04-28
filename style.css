@@ -25,7 +25,7 @@ footer {
 h1 {
     font-size: 4rem;
     margin: 0;
-    text-shadow: 0 0 10px rgba(113,42,227,255);
+    text-shadow: 0 0 10px #ffd700;
     animation: glow 1s ease-in-out infinite alternate;
 }
 

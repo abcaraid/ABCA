@@ -1,7 +1,7 @@
 body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #1a1a1a;
-    color: #ccc;
+    color: #fff;
     font-size: 18px;
     line-height: 1.5;
     margin: 0;
@@ -9,14 +9,14 @@ body {
 }
 
 header {
-    background-color: #4b0082;
+    background-color: rgba(113,42,227,255);
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 footer {
-    background-color: #4b0082;
+    background-color: rgba(113,42,227,255);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -25,18 +25,13 @@ footer {
 h1 {
     font-size: 4rem;
     margin: 0;
-    text-shadow: 0 0 10px #ccc;
+    text-shadow: 0 0 10px rgba(113,42,227,255);
     animation: glow 1s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-    0% {
-        text-shadow: 0 0 10px #ccc;
-    }
-
-    100% {
-        text-shadow: 0 0 20px #4b0082;
-    }
+    0% { text-shadow: 0 0 10px rgba(113,42,227,255); }
+    100% { text-shadow: 0 0 20px #fff; }
 }
 
 .container {
@@ -56,7 +51,7 @@ li {
 
 .btn {
     display: inline-block;
-    background-color: #4b0082;
+    background-color: rgba(113,42,227,255);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -64,14 +59,14 @@ li {
     margin-top: 20px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: scale(1);
-    box-shadow: 0 0 10px rgba(75, 0, 130, 0.5);
+    box-shadow: 0 0 10px rgba(113,42,227,0.5);
 }
 
 .btn:hover {
-    background-color: #663399;
-    color: #fff;
+    background-color: #fff;
+    color: rgba(113,42,227,255);
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(75, 0, 130, 0.8);
+    box-shadow: 0 0 15px rgba(113,42,227,0.8);
 }
 
 .btn-group {
@@ -86,8 +81,8 @@ li {
 }
 
 #call-to-action {
-    background-color: #000;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: rgba(113,42,227,255);
     padding: 60px;
     text-align: center;
 }
@@ -97,7 +92,7 @@ li {
     margin: 0;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #4b0082;
+    color: rgba(113,42,227,255);
 }
 
 #call-to-action p {
@@ -105,7 +100,7 @@ li {
     margin: 0;
     margin-bottom: 40px;
     font-weight: 400;
-    color: #ccc;
+    color: #fff;
 }
 
 #call-to-action a {

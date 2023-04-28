@@ -74,7 +74,7 @@
    	 	.then(response => response.json())
    	 	.then(data => {
      	 		// Update the HTML element with the price information
-     			const Element = document.getElementById('USD');
+     			const priceElement = document.getElementById('USD');
      	 		priceElement.textContent = data.USD.toFixed(5);
    	 		})
 		.catch(error => {

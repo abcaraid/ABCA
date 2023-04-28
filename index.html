@@ -42,7 +42,8 @@
 			</ul>
 			
   			<p>Current price in USD: $<span id="USD">Loading...</span></p>
-			
+			<p>Circulating supply: $<span id="circulating_supply">Loading...</span></p>
+
 			<h2>Features</h2>
 			<ul>
 				<li>Easy-to-use</li>
@@ -69,7 +70,7 @@
 		<p>&copy; 2023 ABCA community. All rights reserved.</p>
 	</footer>
 	<script>
-  		// Make a request to the API endpoint
+  		// Make a USD price request to the API endpoint
   		fetch('https://free-api.vestige.fi/asset/1037125809/price')
    	 	.then(response => response.json())
    	 	.then(data => {
@@ -79,6 +80,17 @@
    	 		})
 		.catch(error => {
      	 		console.error('Error fetching price:', error);
+    		});
+		// Make a circulating request to the API endpoint
+  		fetch('https://free-api.vestige.fi/asset/1037125809')
+   	 	.then(response => response.json())
+   	 	.then(data => {
+     	 		// Update the HTML element with the circulating supply information
+     			const assetElement = document.getElementById('circulating_supply');
+     	 		assetElement.textContent = data.circulating_supply.toFixed(14);
+   	 		})
+		.catch(error => {
+     	 		console.error('Error fetching asset:', error);
     		});
 	</script>
   </body>

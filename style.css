@@ -41,6 +41,17 @@ h1 {
     padding: 20px;
 }
 
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
 ul {
     list-style: disc;
     margin-left: 20px;

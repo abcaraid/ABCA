@@ -49,6 +49,7 @@ h1 {
 }
 
 .category {
+  display: flex;
   max-width: 350px;
   margin: 0;
   padding: 0;

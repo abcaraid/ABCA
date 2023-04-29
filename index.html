@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 fetchPrices();
+setInterval(fetchPrices, 60000); // fetch prices every minute
 });
 </script>
 

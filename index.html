@@ -84,16 +84,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
 
     const usdPrice = data.price.toFixed(6);
-    const circulatingSupply = (Math.floor(marketCap / usdPrice)).toLocaleString();
-    const tvl = data.tvl.toFixed(0).toLocaleString();
     const marketCap = data.market_cap.toFixed(0).toLocaleString();
+    const circulatingSupply = (Math.floor(data.market_cap / usdPrice)).toLocaleString();
+    const tvl = data.tvl.toFixed(0).toLocaleString();
 
     document.getElementById("USD").innerHTML = usdPrice;
     document.getElementById("circulating_supply").innerHTML = circulatingSupply;
     document.getElementById("tvl").innerHTML = tvl;
     document.getElementById("market_cap").innerHTML = marketCap;
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.log(err);
   }
 }
 

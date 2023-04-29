@@ -78,7 +78,7 @@ li {
 
 .btn.raid {
     animation-name: breathe;
-    animation-duration: 8s;
+    animation-duration: 18s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }

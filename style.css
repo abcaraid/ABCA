@@ -47,7 +47,7 @@ h1 {
 }
 
 .category {
-  width: 50%;
+  max-width: 350px;
   margin: 0;
   padding: 0;
 }

@@ -71,6 +71,7 @@
 		<p>&copy; 2023 ABCA community. All rights reserved.</p>
 	</footer>
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   async function fetchPrices() {
   try {
     const response = await fetch('https://free-api.vestige.fi/asset/1037125809/list?currency=USD');
@@ -89,6 +90,7 @@
 }
 
 fetchPrices();
+});
 </script>
 
   </body>

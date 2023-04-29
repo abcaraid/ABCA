@@ -47,7 +47,7 @@
 			</ul>
 			
   			<p>Current price in USD: $<span id="USD">Loading...</span></p>
-			<p>Circulating supply:&emsp;&nbsp;&nbsp;&nbsp;<span id="circulating_supply">Loading...</span></p>
+			<p>Circulating supply:&emsp;&nbsp;<span id="circulating_supply">Loading...</span></p>
 			<p>Total LP in USD:&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;$<span id="tvl">Loading...</span></p>
 			<p>Market cap in USD:&emsp;&emsp;&nbsp;&nbsp;&nbsp;$<span id="market_cap">Loading...</span></p>
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const usdPrice = data.price.toFixed(6);
     const marketCap = data.market_cap.toFixed(0);
     const tvl = data.tvl.toFixed(0);
-    const circulatingSupply = (marketCap / usdPrice).toFixed(0);
+    const circulatingSupply = (marketCap / usdPrice).toLocaleString();
 
     document.getElementById("USD").innerHTML = usdPrice;
     document.getElementById("circulating_supply").innerHTML = circulatingSupply;

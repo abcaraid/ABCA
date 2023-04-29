@@ -42,8 +42,8 @@
 			</ul>
 			
   			<p>Current price in USD: $<span id="USD">Loading...</span></p>
-			<p>Circulating supply: $<span id="circulating_supply">Loading...</span></p>
-			<p>Market cap: $<span id="market_cap">Loading...</span></p>
+			<p>Circulating supply: <span id="circulating_supply">Loading...</span></p>
+			<p>Market cap in USD: $<span id="market_cap">Loading...</span></p>
 
 			<h2>Features</h2>
 			<ul>
@@ -71,21 +71,24 @@
 		<p>&copy; 2023 ABCA community. All rights reserved.</p>
 	</footer>
 <script>
-  // Make a USD price request to the API endpoint
-  fetch('https://free-api.vestige.fi/asset/1037125809/list?currency=USD')
-    .then(response => response.json())
-    .then(data => {
-      // Get the relevant data from the API response
-      const usdPrice = data.price.toFixed(6);
-      const marketCap = data.market_cap.toFixed(2);
-      // Calculate the circulating supply
-      const circulatingSupply = (marketCap / usdPrice).toFixed(2);
-      // Update the HTML with the fetched data
-      document.getElementById("USD").innerHTML = usdPrice;
-      document.getElementById("circulating_supply").innerHTML = circulatingSupply;
-      document.getElementById("market_cap").innerHTML = marketCap;
-    })
-    .catch(error => console.log(error));
+  async function fetchPrices() {
+  try {
+    const response = await fetch('https://free-api.vestige.fi/asset/1037125809/list?currency=USD');
+    const data = await response.json();
+
+    const usdPrice = data.price.toFixed(6);
+    const marketCap = data.market_cap.toFixed(2);
+    const circulatingSupply = (marketCap / usdPrice).toFixed(2);
+
+    document.getElementById("USD").innerHTML = usdPrice;
+    document.getElementById("circulating_supply").innerHTML = circulatingSupply;
+    document.getElementById("market_cap").innerHTML = marketCap;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+fetchPrices();
 </script>
 
   </body>

@@ -72,32 +72,21 @@
 	</footer>
 <script>
   // Make a USD price request to the API endpoint
-  fetch('https://free-api.vestige.fi/asset/1037125809/price')
+  fetch('https://free-api.vestige.fi/asset/1037125809/list?currency=USD')
     .then(response => response.json())
     .then(data => {
-      // Update the HTML element with the price information
-      const priceElement = document.getElementById('USD');
-      priceElement.textContent = data.USD.toFixed(5);
-      // Make a circulating request to the API endpoint
-      fetch('https://free-api.vestige.fi/asset/1037125809')
-        .then(response => response.json())
-        .then(data => {
-          // Update the HTML element with the circulating supply information
-          const assetElement = document.getElementById('circulating_supply');
-          assetElement.textContent = data.circulating_supply.toFixed(8);
-	      
-	  // Calculate and update the market cap element
-          const marketCapElement = document.getElementById('market_cap');
-	const marketCap = data.USD * data.circulating_supply;
-	marketCapElement.textContent = marketCap.toFixed(2);
-        })
-        .catch(error => {
-          console.error('Error fetching asset:', error);
-        });
+      // Get the relevant data from the API response
+      const usdPrice = data.price.toFixed(6);
+      const marketCap = data.market_cap.toFixed(2);
+      // Calculate the circulating supply
+      const circulatingSupply = (marketCap / usdPrice).toFixed(2);
+      // Update the HTML with the fetched data
+      document.getElementById("USD").innerHTML = usdPrice;
+      document.getElementById("circulating_supply").innerHTML = circulatingSupply;
+      document.getElementById("market_cap").innerHTML = marketCap;
     })
-    .catch(error => {
-      console.error('Error fetching price:', error);
-    });
+    .catch(error => console.log(error));
 </script>
+
   </body>
 </html>

@@ -48,6 +48,7 @@
 			
   			<p>Current price in USD: $<span id="USD">Loading...</span></p>
 			<p>Circulating supply: <span id="circulating_supply">Loading...</span></p>
+			<p>Total LP in USD: $<span id="tvl">Loading...</span></p>
 			<p>Market cap in USD: $<span id="market_cap">Loading...</span></p>
 
 			<h2>Features</h2>
@@ -83,11 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
 
     const usdPrice = data.price.toFixed(6);
-    const marketCap = data.market_cap.toFixed(2);
-    const circulatingSupply = (marketCap / usdPrice).toFixed(2);
+    const marketCap = data.market_cap.toFixed(0);
+    const tvl = data.tvl.toFixed(0);
+    const circulatingSupply = (marketCap / usdPrice).toFixed(0);
 
     document.getElementById("USD").innerHTML = usdPrice;
     document.getElementById("circulating_supply").innerHTML = circulatingSupply;
+    document.getElementById("tvl").innerHTML = tvl;
     document.getElementById("market_cap").innerHTML = marketCap;
   } catch (error) {
     console.log(error);

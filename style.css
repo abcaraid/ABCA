@@ -3,7 +3,7 @@ body {
     background-color: #1a1a1a;
     color: #fff;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.3;
     margin: 0;
     padding: 0;
 }
@@ -74,6 +74,91 @@ li {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     transform: scale(1);
     box-shadow: 0 0 10px rgba(113,42,227,0.5);
+}
+
+.abca-section {
+    background-image: linear-gradient(45deg, #FEB692, #EA5455, #B06AB3, #3C8CE7, #4CE1B6);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 800px;
+    
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+.abca-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.abca-section p {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.abca-section ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.abca-section li {
+    margin: 5px;
+    font-size: 16px;
+    color: #666;
+}
+
+.abca-section a {
+    color: rgb(218, 203, 242);;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.abca-section a:hover {
+    color: rgb(0, 0, 0);;
+}
+
+.abca-section .wallets-list {
+    margin-bottom: 10px;
+}
+
+.abca-section .wallets-list li {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+}
+
+.abca-section .wallets-list li:last-child {
+    margin-right: 0;
 }
 
 .btn.raid {

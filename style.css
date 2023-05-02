@@ -139,6 +139,13 @@ li {
     color: rgb(21, 3, 49);
     text-decoration: none;
     font-weight: 700;
+    animation: text-animation 4s ease-in-out forwards;
+}
+
+@keyframes text-animation {
+0% {transform: scale(1);}
+50% {transform: scale(1.1);}
+100% {transform: scale(1);}
 }
 
 .abca-section a:hover {

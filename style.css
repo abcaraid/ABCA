@@ -154,10 +154,10 @@ li {
     color: rgb(21, 3, 49);
     font-weight: 700;
     transition: color 0.3s ease-in-out;
-    background-image: linear-gradient(to bottom right, #000000ca, #28024bc2);
+    background-image: linear-gradient(to bottom right, #000000, #330063c2);
     background-size: 200% 200%;
     background-position: 0 0;
-    animation: gradient1 8s linear infinite;
+    animation: gradient1 4s linear infinite;
   }
   
   @keyframes gradient1 {

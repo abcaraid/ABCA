@@ -135,12 +135,12 @@ li {
   
 
 .abca-section h2 {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.69);
 }
 
 .abca-section p {

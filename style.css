@@ -141,10 +141,39 @@ li {
     text-decoration: none;
     color: rgb(21, 3, 49);
     font-weight: 700;
-    transition: color 0.2s ease-out;
+    transition: color 0.3s ease-in-out;
+    background: linear-gradient(to right, #333, #222, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .abca-section a {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: rgb(21, 3, 49);
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom right, #000000ca, #28024bc2);
+    background-size: 200% 200%;
+    background-position: 0 0;
+    animation: gradient1 8s linear infinite;
   }
   
-  .abca-section a:before {
+  @keyframes gradient1 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+
+.abca-section a:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -159,6 +188,11 @@ li {
   
   .abca-section a:hover {
     color: rgba(113,42,227,255);
+    transition: color 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom right, #4d047d, #4a05ea);
+    background-size: 200% 200%;
+    background-position: 0 0;
+    animation: gradient1 2s linear infinite;
   }
   
   .abca-section a:hover:before {

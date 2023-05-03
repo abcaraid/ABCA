@@ -9,7 +9,9 @@ body {
 }
 
 header {
-    background-color: rgba(113,42,227,255);
+    background-image: linear-gradient(-45deg, hsl(263, 100%, 51%), hsl(270, 100%, 25%), hsl(260, 80%, 48%), hsl(266, 100%, 62%));
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
     color: #fff;
     padding: 5px;
     text-align: center;
@@ -27,7 +29,7 @@ h1 {
     font-size: 4rem;
     margin: 0;
     text-shadow: 0 0 10px #ffd700;
-    animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -53,6 +55,35 @@ h1 {
   margin: auto;
   padding: 0;
 }
+
+.category1 {
+    border: 2px solid #6b48ff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .category1 h2 {
+    margin: 0;
+    animation: glow 4s ease-in-out infinite alternate;
+  }
+  
+  .category1 p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .category1 p:first-child {
+    margin-top: 0;
+  }
+  
+  .category1 span {
+    font-weight: bold;
+  }
+  
 
 ul {
     list-style: disc;

@@ -56,31 +56,35 @@ h1 {
   padding: 0;
 }
 
-.category1 {
+.categoryToken {
     border: 2px solid #6b48ff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
   }
+
+  .categoryToken .btn{
+    margin-top: 5px;
+  }
   
-  .category1 h2 {
-    margin: 0;
+  .categoryToken h2 {
+    margin: 0px;
     animation: glow 4s ease-in-out infinite alternate;
   }
   
-  .category1 p {
+  .categoryToken p {
     margin: 10px 0;
     font-size: 18px;
     line-height: 1.5;
   }
   
-  .category1 p:first-child {
+  .categoryToken p:first-child {
     margin-top: 0;
   }
   
-  .category1 span {
+  .categoryToken span {
     font-weight: bold;
   }
   

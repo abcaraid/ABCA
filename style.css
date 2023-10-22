@@ -336,3 +336,41 @@ li {
     transform: scale(1.2);
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
 }
+
+#leaderboard-container {
+  margin-top: 20px;
+  background-color: #1b1b1b;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#leaderboard-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#leaderboard-table th, #leaderboard-table td {
+  border: 1px solid #333333;
+  text-align: left;
+  padding: 10px;
+}
+
+#leaderboard-table th {
+  background-color: #2a2a2a;
+}
+
+#leaderboard-table tr:nth-child(even) {
+  background-color: #242424;
+}
+
+#leaderboard-table tr:hover {
+  background-color: #3a3a3a;
+}
